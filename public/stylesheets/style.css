@@ -64,20 +64,21 @@ h2 {
 }
 
 .down1 {
-	background-color: #FF0000;
+	border : 3px solid #FF00DD;
 }
 
 .down2 {
-	background-color: #FFA7A7;
+	border : 3px dashed #FF00DD;
 }
 
 .up1 {
-	background-color: #0054FF;
+	border : 3px solid #000000;
 }
 
 .up2 {
-	background-color: #6799FF;
+	border : 3px dashed #000000;
 }
+
 
 .얼반 {
 	background-color: #47C83E;
