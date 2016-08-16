@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body ng-app="sortableApp">
+  
+<div ng-controller="sortableController as sortC" class="container">
+  <h2>락잘알더제너럴락킹지니어스김킹갓민</h2>
+  <h3>Kim King God Min The General Locking Genius Who knows Locking very well.</h3>
+
+  <form ng-submit="addPerf()">
+  <label for="perfTitle">무대명 : </label>
+    <input ng-model="creatingPerf.title" type="text" id="perfTitle">
+    <label for="perfGenre">장르 : </label>
+    <input ng-model="creatingPerf.genre" type="text" id="perfGenre">
+    <label for="perfMembers">멤버명(띄어쓰기로 구분) : </label>
+    <input ng-model="creatingMembers" type="text" id="perfMembers">
+    <input type="submit" value="Save">
+  </form>
+
+
+  <div>
+    <ul ui-sortable="sortableOptions" ng-model="list" class="list">
+      <li ng-repeat="item in list" class="item">
+      <div><span>{{item.title}}</span></div>
+        
+        <div ng-repeat="mem in item.members" class="member">{{mem}}</div>
+        
+        <!--<a ng-click="removePerf(item)" href='#' aria-label='close'>&times;</a>-->
+      </li>
+    </ul>
+  </div>
+
+
+  
+  <div class="clear"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+  <script src="https://rawgithub.com/angular-ui/ui-sortable/master/src/sortable.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</div>
+
+</body>
+
+</html>
