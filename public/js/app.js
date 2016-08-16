@@ -41,7 +41,7 @@
       let size = $scope.list.length;
 
       for(var from=0; from<size ; from++){
-              $('li:nth-child('+(from+1)+') span').addClass($scope.list[from].genre);
+              $('li:nth-child('+(from+1)+')').addClass($scope.list[from].genre);
           }
 
       for(var from=0; from<size ; from++){
