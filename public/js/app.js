@@ -42,6 +42,8 @@
 
       for(var from=0; from<size ; from++){
               $('li:nth-child('+(from+1)+')').addClass($scope.list[from].genre);
+              if($scope.list[from].title=="곽타임")
+                $('li:nth-child('+(from+1)+')').addClass("mc");
           }
 
       for(var from=0; from<size ; from++){
